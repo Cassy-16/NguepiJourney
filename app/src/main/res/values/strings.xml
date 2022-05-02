@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NguepiJourney</string>
+    <string name="title_activity_screen_two">ScreenTwo</string>
 </resources>
