@@ -63,8 +63,8 @@ class MainActivity : ComponentActivity() {
                             .clip(CutCornerShape(15.dp))
 
                             .border(
-                                border = BorderStroke(
-                                    width = 3.dp,
+                                        border = BorderStroke(
+                                            width = 3.dp,
                                     brush = SolidColor(Color.DarkGray)
                                 )
                             )
@@ -73,17 +73,25 @@ class MainActivity : ComponentActivity() {
 
                     )
                     {
-                        Icon(
 
-                        imageVector = Icons.Rounded.Info,
-                        contentDescription = "Info description",
-                        Modifier.padding(end=40.dp, start=5.dp)
-                            .size(width = 40.dp, height = 50.dp),
-                        Color.Black
+                        Button(onClick = { visible.value = true },
+                            modifier = Modifier.size(width = 400.dp, height = 60.dp),
+                            border = BorderStroke(3.dp, brush = SolidColor(Color.DarkGray)),
+                            shape = CutCornerShape(20.dp),
+                            colors = ButtonDefaults.
+                            buttonColors(backgroundColor = colorResource(id = R.color.white))
+                            ) {
 
+                            Icon(
 
-                    )
-                        TextButton(onClick = { visible.value = true }) {
+                                imageVector = Icons.Rounded.Info,
+                                contentDescription = "Info description",
+                                Modifier.padding(end=40.dp, start=5.dp)
+                                    .size(width = 40.dp, height = 50.dp),
+                                Color.Black
+
+                            )
+
                             Text(text ="INFO",
                                 modifier= Modifier
                                     .size(width = 300.dp,height = 200.dp),
@@ -166,7 +174,7 @@ fun Alert(setVisible: MutableState<Boolean>)
                     "\n" +
                     " Coding thus far I can definitely see that the Jetpack compose library has and is helping me gain better performance and data flow in my application." +
                     "\n" +
-                    "I can not wait to dive deeper in Kotlin.",color = Color.Black,style = MaterialTheme.typography.subtitle2)}
+                    "I can not wait to dive deeper in Kotlin.",color = Color.Black,style = MaterialTheme.typography.subtitle2, textAlign = TextAlign.Justify)}
         )
 
 

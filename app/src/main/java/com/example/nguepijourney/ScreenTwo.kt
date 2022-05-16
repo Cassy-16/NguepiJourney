@@ -80,7 +80,10 @@ class ScreenTwo : ComponentActivity() {
 
                 }
                 Button(
-                    onClick = {},
+                    onClick = {
+                        val navigate = Intent(this@ScreenTwo, ScreenThree::class.java)
+                        startActivity(navigate)
+                    },
                     modifier = Modifier.paddingFromBaseline(top = 600.dp)
                         .size(width = 400.dp, height = 60.dp),
                     border = BorderStroke(3.dp, brush = SolidColor(Color.DarkGray)),
@@ -93,7 +96,13 @@ class ScreenTwo : ComponentActivity() {
                 Button(onClick = {
                     val navigate = Intent(this@ScreenTwo, MainActivity::class.java)
                     startActivity(navigate)
-                }) {
+                },
+                    modifier = Modifier.paddingFromBaseline(top = 800.dp)
+                        .size(width = 400.dp, height = 60.dp),
+                    border = BorderStroke(3.dp, brush = SolidColor(Color.DarkGray)),
+                    shape = CutCornerShape(20.dp),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.white))
+                ) {
                     Icon(
                         imageVector = Icons.Outlined.ArrowBack,
                         contentDescription = "Return",

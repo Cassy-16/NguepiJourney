@@ -10,6 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NguepiJourney">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.NguepiJourney" />
+        <activity
+            android:name=".ScreenThree"
+            android:exported="false"
+            android:label="@string/title_activity_screen_three"
+            android:theme="@style/Theme.NguepiJourney" />
+        <activity
             android:name=".ScreenTwo"
             android:exported="false"
             android:label="@string/title_activity_screen_two"
